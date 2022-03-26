@@ -1,8 +1,11 @@
+BINARY_NAME=go-service
+
 build:
-  go build -o bin/simple_server main.go
+	go build -o ${BINARY_NAME} main.go
 
 run:
-  go run simple_server.go
+	./${BINARY_NAME}
 
 clean:
-  go clean
+	go clean
+	rm ${BINARY_NAME}
